@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { FileDown, Linkedin, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
 import { Container } from "./ui/Container";
@@ -71,23 +72,29 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mx-auto hidden aspect-square w-full max-w-sm lg:block"
+          className="relative mx-auto hidden aspect-[4/5] w-full max-w-sm lg:block"
         >
           <motion.div
             animate={{ y: [0, -16, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative flex h-full w-full items-center justify-center rounded-2xl border border-border-strong bg-gradient-to-b from-surface to-surface-2 shadow-soft"
+            className="relative h-full w-full overflow-hidden rounded-2xl border border-border-strong bg-surface shadow-soft"
           >
+            <Image
+              src="/images/portrait.jpg"
+              alt="Portrait of Sumit Gaur"
+              fill
+              priority
+              sizes="(min-width: 1024px) 384px, 0px"
+              className="object-cover object-top grayscale contrast-[1.05]"
+            />
             <div
-              className="absolute inset-0 rounded-2xl opacity-40"
+              className="pointer-events-none absolute inset-0"
               style={{
                 background:
-                  "radial-gradient(circle at 30% 20%, rgba(45,212,255,0.18), transparent 60%)",
+                  "linear-gradient(180deg, rgba(8,17,31,0) 55%, rgba(8,17,31,0.55) 100%), radial-gradient(circle at 30% 15%, rgba(45,212,255,0.16), transparent 55%)",
               }}
             />
-            <span className="relative font-heading text-7xl font-semibold tracking-tight text-foreground/90 grayscale">
-              SG
-            </span>
+            <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/[0.06]" />
           </motion.div>
         </motion.div>
       </Container>
