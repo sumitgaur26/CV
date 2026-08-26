@@ -1,42 +1,82 @@
 [
   {
-    "id": "task-tracker-api",
-    "name": "Task Tracker API",
-    "description": "A REST API for managing team tasks with role-based access control, built to explore clean layered architecture in Node.js.",
-    "technologies": ["Node.js", "Express", "PostgreSQL", "REST APIs", "Docker"],
-    "repo": "https://github.com/your-username/task-tracker-api",
+    "id": "dce-account-vending",
+    "name": "Disposable Cloud Environment (DCE) Account Vending",
+    "description": "End-to-end on-demand AWS account provisioning system: API Gateway triggers a Lambda that kicks off a Step Functions workflow, with lease and state managed in DynamoDB across a pool of 25 accounts, including automated per-account budget monitoring and reclamation — removing manual account provisioning from the team's critical path.",
+    "technologies": ["AWS", "API Gateway", "Lambda", "Step Functions", "DynamoDB", "Event-Driven Architecture", "Self-Service APIs"],
+    "repo": "",
     "demo": ""
   },
   {
-    "id": "portfolio-cv-site",
-    "name": "Portfolio / CV Website",
-    "description": "This site — a searchable digital CV built with vanilla HTML, CSS, and JavaScript, with project data driven entirely by JSON.",
-    "technologies": ["JavaScript", "HTML5", "CSS3"],
-    "repo": "https://github.com/your-username/CV",
+    "id": "identity-access-infrastructure",
+    "name": "Org-Wide Identity & Access Infrastructure",
+    "description": "Migrated AWS IAM Identity Center permission set provisioning from manual CloudFormation StackSets to Terraform deployed via Jenkins; manages Service Control Policies at the OU level and administers CyberArk privileged access (SIA, SCA) for least-privilege governance across the organization.",
+    "technologies": ["AWS IAM Identity Center", "Terraform", "Jenkins", "CyberArk", "Service Control Policies", "RBAC", "Least-Privilege Design", "CloudFormation"],
+    "repo": "",
     "demo": ""
   },
   {
-    "id": "realtime-dashboard",
-    "name": "Realtime Analytics Dashboard",
-    "description": "A React dashboard that visualizes live event data streamed from a Node.js backend over WebSockets.",
-    "technologies": ["React", "TypeScript", "Node.js", "MongoDB"],
-    "repo": "https://github.com/your-username/realtime-dashboard",
+    "id": "aims-compliance-platform",
+    "name": "AIMS — AMI Governance & Compliance Platform",
+    "description": "Fully serverless governance platform (S3/CloudFront front end, API Gateway routed to Lambda, ECS-hosted backend, Lambda-gated database access) that enforces AMI compliance in real time across every AWS account in the organization. CloudTrail instance-launch events stream through a central event bus and SQS queue to a Python Lambda that validates the AMI against an approved list, automatically stopping non-compliant instances via a cross-account role.",
+    "technologies": ["AWS", "Lambda", "API Gateway", "ECS", "CloudTrail", "SQS", "EventBridge", "Python", "Service Decoupling", "Event-Driven Architecture"],
+    "repo": "",
     "demo": ""
   },
   {
-    "id": "data-pipeline",
-    "name": "ETL Data Pipeline",
-    "description": "A scheduled Python pipeline that extracts data from third-party APIs, transforms it, and loads it into a warehouse for reporting.",
-    "technologies": ["Python", "SQL", "AWS", "Docker"],
-    "repo": "https://github.com/your-username/data-pipeline",
+    "id": "enterprise-eks-platform",
+    "name": "Enterprise EKS Platform at Scale",
+    "description": "Built and operates Amazon EKS clusters at enterprise scale (3,000+ nodes), providing the compute substrate that product teams deploy onto without owning cluster operations themselves.",
+    "technologies": ["AWS", "EKS", "Kubernetes", "Multi-Tenant Infrastructure", "Service Orchestration"],
+    "repo": "",
     "demo": ""
   },
   {
-    "id": "component-library",
-    "name": "Shared UI Component Library",
-    "description": "A versioned, accessible component library used across several internal React apps, with automated visual regression tests.",
-    "technologies": ["React", "TypeScript", "CSS3", "Git"],
-    "repo": "https://github.com/your-username/component-library",
+    "id": "self-service-cicd-platform",
+    "name": "Self-Service CI/CD Platform",
+    "description": "Built a self-service CI/CD platform (Jenkins, Bitbucket/GitHub) enabling 50+ automated deployments per month and cutting release cycle time by 30%; led a migration from Bitbucket to GitHub, including a secure ECS-based cloning container for private-subnet repository access.",
+    "technologies": ["Jenkins", "Bitbucket", "GitHub", "ECS", "CI/CD", "Self-Service APIs"],
+    "repo": "",
+    "demo": ""
+  },
+  {
+    "id": "observability-architecture",
+    "name": "Platform Observability Architecture",
+    "description": "Established observability architecture (Datadog, Grafana, Splunk) across the platform, cutting mean time to resolution (MTTR) by 20%.",
+    "technologies": ["Datadog", "Grafana", "Splunk", "Observability", "Incident Response"],
+    "repo": "",
+    "demo": ""
+  },
+  {
+    "id": "image-lifecycle-automation",
+    "name": "Automated Image Lifecycle Management",
+    "description": "Automated image lifecycle management (QCOW2 to AMI), reducing environment provisioning time from 2–3 days to under 1 hour. Recognized with an internal Excellence Award.",
+    "technologies": ["AWS", "Python", "Infrastructure as Code"],
+    "repo": "",
+    "demo": ""
+  },
+  {
+    "id": "cloud-cost-optimization",
+    "name": "Cloud Cost Optimization Initiative",
+    "description": "Drove a 50% reduction in AWS cloud costs through rightsizing, spot instance policy, and compute governance, funding capacity for further platform investment. Recognized with Senior Leadership Appreciation.",
+    "technologies": ["AWS", "Cost Governance", "Capacity Planning"],
+    "repo": "",
+    "demo": ""
+  },
+  {
+    "id": "enterprise-kubernetes-nagarro",
+    "name": "Enterprise Kubernetes Platform (Nagarro)",
+    "description": "Designed and deployed scalable Kubernetes clusters for high-availability production workloads across multiple enterprise client accounts, with Terraform-based infrastructure automation for consistent, repeatable environment provisioning and centralized monitoring via Prometheus, Grafana, and CloudWatch.",
+    "technologies": ["Kubernetes", "Terraform", "Prometheus", "Grafana", "CloudWatch", "CI/CD", "Infrastructure as Code"],
+    "repo": "",
+    "demo": ""
+  },
+  {
+    "id": "cicd-pipelines-globallogic",
+    "name": "CI/CD Pipeline Automation (GlobalLogic)",
+    "description": "Built and maintained CI/CD pipelines using Jenkins; developed Python and Shell automation scripts for infrastructure provisioning, integrating infrastructure-as-code tooling and security protocols to safeguard cloud environments.",
+    "technologies": ["Jenkins", "Python", "Bash/Shell", "CI/CD", "Infrastructure as Code"],
+    "repo": "",
     "demo": ""
   }
 ]

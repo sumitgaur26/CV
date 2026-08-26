@@ -49,17 +49,22 @@ it today.
 against, so keep names consistent with `skills.json` (e.g. always
 `"Node.js"`, not sometimes `"NodeJS"`).
 
-## Filling in your own content
+## Content
 
-Edit the three files in `data/` and replace every placeholder value
-(`"Your Name"`, `your.email@example.com`, sample project entries, etc.)
-with your real information. Nothing in this repo displays any personal
-data beyond what you put into those files — there's no analytics,
-tracking, or third-party form embed.
+`data/profile.json`, `data/skills.json`, and `data/projects.json` are
+populated from Sumit Gaur's résumé. The phone number was intentionally
+left out of the public contact section (and stripped from the
+downloadable résumé at `assets/resume.docx`) to avoid exposing it on a
+public static site. GitHub is left blank in `profile.json` pending a
+public profile link.
 
-Optional: drop your résumé PDF at `assets/resume.pdf` to power the
-"Download Résumé" button (or update `resumeUrl` in `profile.json` to
-point elsewhere, or delete the field to hide the button).
+To update content later, edit the three files in `data/` directly —
+nothing in this repo displays any personal data beyond what's in those
+files, and there's no analytics, tracking, or third-party form embed.
+
+The "Download Résumé" button points at `assets/resume.docx`. Replace
+that file (and update `resumeUrl` in `profile.json` if you rename or
+change its format) whenever the résumé changes.
 
 ## Running locally
 

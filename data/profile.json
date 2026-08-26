@@ -1,13 +1,13 @@
 {
-  "name": "Your Name",
-  "title": "Software Engineer",
-  "location": "City, Country",
-  "summary": "Replace this with a 2-3 sentence summary of who you are, what you build, and what you're looking for. Keep it specific and outcome-focused rather than generic.",
-  "email": "your.email@example.com",
+  "name": "Sumit Gaur",
+  "title": "Platform Lead | Distributed Systems | Cloud Infrastructure | Reliability & Platform Architecture",
+  "location": "Delhi, India",
+  "summary": "Platform engineer with 10+ years designing and operating the distributed, event-driven infrastructure that other engineering teams depend on to ship reliably at scale. Owns systems end-to-end, from architecture through production operation, spanning cross-account cloud governance, asynchronous service infrastructure, identity and access control, and CI/CD platforms serving 100+ microservices in production. NVIDIA Certified Associate (NCA-AIIO), AWS Solutions Architect Professional, and CKA certified; currently leads a 3-engineer platform team.",
+  "email": "sumitgaur769@gmail.com",
   "social": {
-    "github": "https://github.com/your-username",
-    "linkedin": "https://linkedin.com/in/your-username",
+    "github": "",
+    "linkedin": "https://linkedin.com/in/sumitgaur-pl",
     "website": ""
   },
-  "resumeUrl": "assets/resume.pdf"
+  "resumeUrl": "assets/resume.docx"
 }
