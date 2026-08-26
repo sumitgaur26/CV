@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Cpu, Database, Network, Gauge, Server } from "lucide-react";
-import { aiInfraCapabilities } from "@/data/aiInfrastructure";
+import { aiInfraCapabilities, genAiTools } from "@/data/aiInfrastructure";
 import { Container } from "./ui/Container";
 import { SectionHeading } from "./ui/SectionHeading";
 import { Reveal, RevealGroup, revealItem } from "./ui/Reveal";
@@ -54,7 +54,12 @@ export function AIInfrastructure() {
           </div>
         </Reveal>
 
-        <RevealGroup className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <Reveal delay={0.15} className="mt-16">
+          <p className="font-body text-xs font-medium uppercase tracking-wider text-muted">
+            Infrastructure Fundamentals
+          </p>
+        </Reveal>
+        <RevealGroup className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {aiInfraCapabilities.map((cap) => (
             <motion.div
               key={cap.title}
@@ -63,6 +68,24 @@ export function AIInfrastructure() {
             >
               <h3 className="font-heading text-base font-medium text-foreground">{cap.title}</h3>
               <p className="mt-2 font-body text-sm leading-relaxed text-muted">{cap.description}</p>
+            </motion.div>
+          ))}
+        </RevealGroup>
+
+        <Reveal delay={0.1} className="mt-14">
+          <p className="font-body text-xs font-medium uppercase tracking-wider text-muted">
+            Applied Gen AI Tooling
+          </p>
+        </Reveal>
+        <RevealGroup className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {genAiTools.map((tool) => (
+            <motion.div
+              key={tool.title}
+              variants={revealItem}
+              className="rounded-2xl border border-border bg-background/40 p-6 transition-colors hover:border-accent/30"
+            >
+              <h3 className="font-heading text-base font-medium text-foreground">{tool.title}</h3>
+              <p className="mt-2 font-body text-sm leading-relaxed text-muted">{tool.description}</p>
             </motion.div>
           ))}
         </RevealGroup>

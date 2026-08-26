@@ -34,7 +34,7 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       "GPU Architecture",
       "NVIDIA DGX",
-      "InfiniBand / RoCE",
+      "InfiniBand/RoCE",
       "RDMA Networking",
       "Slurm",
       "DCGM",
@@ -42,7 +42,11 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     category: "Languages",
-    skills: ["Python", "Bash / Shell"],
+    skills: ["Python", "Bash/Shell"],
+  },
+  {
+    category: "Generative AI",
+    skills: ["Claude Code", "GitHub Copilot", "RAG", "LangChain", "LlamaIndex"],
   },
   {
     category: "Cloud & Infrastructure",

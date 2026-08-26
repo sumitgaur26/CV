@@ -39,6 +39,10 @@ const ALIASES: Record<string, string> = {
   "least privilege": "least-privilege design",
   finops: "cost governance",
   "cost optimization": "cost governance",
+  "llama index": "llamaindex",
+  "retrieval augmented generation": "rag",
+  copilot: "github copilot",
+  "claude": "claude code",
 };
 
 function normalize(s: string): string {
@@ -127,6 +131,6 @@ export const SEARCH_SUGGESTIONS = [
   "Terraform",
   "CyberArk",
   "GPU Architecture",
-  "Python",
+  "LangChain",
   "AWS",
 ];
