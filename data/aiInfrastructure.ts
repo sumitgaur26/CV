@@ -1,7 +1,7 @@
 import type { AIInfraCapability } from "@/lib/types";
 
-// Scoped to what's actually verified (NVIDIA NCA-AIIO certification +
-// platform background) — not extended into LLM/MLOps claims without
+// Scoped to what's actually verified (NVIDIA NCA-AIIO certification and
+// platform background), not extended into LLM/MLOps claims without
 // hands-on experience to back them.
 export const aiInfraCapabilities: AIInfraCapability[] = [
   {

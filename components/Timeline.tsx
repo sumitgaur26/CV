@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { experience } from "@/data/experience";
@@ -8,9 +8,19 @@ import { Container } from "./ui/Container";
 import { SectionHeading } from "./ui/SectionHeading";
 import { Reveal } from "./ui/Reveal";
 import { cn } from "@/lib/utils";
+import { EXPAND_ROLE_EVENT } from "@/lib/events";
 
 export function Timeline() {
   const [expanded, setExpanded] = useState<string | null>(experience[0]?.id ?? null);
+
+  useEffect(() => {
+    function handleExpand(e: Event) {
+      const roleId = (e as CustomEvent<string>).detail;
+      setExpanded(roleId);
+    }
+    window.addEventListener(EXPAND_ROLE_EVENT, handleExpand);
+    return () => window.removeEventListener(EXPAND_ROLE_EVENT, handleExpand);
+  }, []);
 
   return (
     <section id="experience" className="py-28">
@@ -29,7 +39,7 @@ export function Timeline() {
               const isOpen = expanded === role.id;
               return (
                 <Reveal key={role.id} delay={index * 0.05}>
-                  <li className="relative pl-9">
+                  <li id={`role-${role.id}`} className="relative scroll-mt-28 pl-9">
                     <span
                       className={cn(
                         "absolute left-0 top-2 flex h-[19px] w-[19px] items-center justify-center rounded-full border-2",

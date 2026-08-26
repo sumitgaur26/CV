@@ -12,12 +12,16 @@ export function Projects() {
         <SectionHeading
           eyebrow="Featured Work"
           title="Selected case studies."
-          description="Systems I designed, built, and operate in production — not side projects."
+          description="Systems I designed, built, and operate in production, not side projects."
         />
 
         <div className="mt-16 space-y-24">
           {caseStudies.map((study, index) => (
-            <article key={study.id} className="border-t border-border pt-16 first:border-t-0 first:pt-0">
+            <article
+              key={study.id}
+              id={study.id}
+              className="scroll-mt-28 border-t border-border pt-16 first:border-t-0 first:pt-0"
+            >
               <Reveal>
                 <div className="flex flex-wrap items-baseline justify-between gap-4">
                   <h3 className="font-heading text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">

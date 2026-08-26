@@ -2,10 +2,10 @@ import type { Profile, Metric } from "@/lib/types";
 
 export const profile: Profile = {
   name: "Sumit Gaur",
-  role: "Senior Platform / DevOps Engineer",
+  role: "AI Platform Lead",
   tagline: "Building cloud platforms that scale AI.",
   valueProposition:
-    "I design and operate the distributed infrastructure — cloud governance, CI/CD, identity, and GPU platforms — that engineering orgs depend on to ship reliably at scale.",
+    "I design and operate the distributed infrastructure (cloud governance, CI/CD, identity, and GPU platforms) that engineering orgs depend on to ship reliably at scale.",
   location: "Delhi, India",
   summary:
     "Platform engineer with 10+ years designing and operating the distributed, event-driven infrastructure that other engineering teams depend on to ship reliably at scale. Owns systems end-to-end, from architecture through production operation, spanning cross-account cloud governance, asynchronous service infrastructure, identity and access control, and CI/CD platforms serving 100+ microservices in production.",

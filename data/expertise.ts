@@ -25,7 +25,7 @@ export const expertiseAreas: ExpertiseArea[] = [
     title: "AI / GPU Infrastructure",
     summary: "Extending platform fundamentals into GPU cluster architecture.",
     problem:
-      "AI workloads need infrastructure fundamentals — networking, scheduling, monitoring — that most cloud platform teams haven't built for.",
+      "AI workloads need infrastructure fundamentals (networking, scheduling, monitoring) that most cloud platform teams haven't built for.",
     approach:
       "NVIDIA-certified (NCA-AIIO) study and applied practice across GPU architecture, InfiniBand/RDMA fabrics, and workload orchestration with Slurm and Kubernetes.",
     impact: "A platform background positioned to extend directly into AI infrastructure teams.",

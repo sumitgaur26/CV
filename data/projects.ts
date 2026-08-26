@@ -4,9 +4,9 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "dce-account-vending",
     name: "Disposable Cloud Environment",
-    period: "Gartner · 2022–Present",
+    period: "Gartner · 2022 - Present",
     overview:
-      "An on-demand AWS account-vending system that lets teams request an isolated, pre-governed account without filing a ticket — and reclaims it automatically when it's no longer needed.",
+      "An on-demand AWS account-vending system that lets teams request an isolated, pre-governed account without filing a ticket, and reclaims it automatically when it's no longer needed.",
     architecture: [
       "API Gateway receives a provisioning request",
       "Lambda validates the request and starts a Step Functions workflow",
@@ -16,7 +16,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["AWS", "API Gateway", "Lambda", "Step Functions", "DynamoDB"],
     challenge:
-      "Manual account provisioning was a recurring bottleneck — every new environment request sat in the platform team's queue, and there was no automatic way to reclaim accounts once a team was done with them.",
+      "Manual account provisioning was a recurring bottleneck: every new environment request sat in the platform team's queue, and there was no automatic way to reclaim accounts once a team was done with them.",
     solution:
       "Designed an end-to-end, event-driven vending workflow with lease tracking and automated budget monitoring, so provisioning and reclamation both happen without a human in the loop.",
     results: [
@@ -27,8 +27,8 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "aims-compliance-platform",
-    name: "AIMS — AMI Governance Platform",
-    period: "Gartner · 2022–Present",
+    name: "AIMS: AMI Governance Platform",
+    period: "Gartner · 2022 - Present",
     overview:
       "A fully serverless governance platform that enforces AMI compliance in real time across every AWS account in the organization, with automatic remediation of violations.",
     architecture: [
@@ -41,7 +41,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["AWS", "Lambda", "API Gateway", "ECS", "CloudTrail", "SQS", "EventBridge", "Python"],
     challenge:
-      "AMI compliance review was a manual, reactive process — violations were often caught long after an instance had already launched, if at all.",
+      "AMI compliance review was a manual, reactive process: violations were often caught long after an instance had already launched, if at all.",
     solution:
       "Built a serverless pipeline that intercepts every instance-launch event across every account in real time and enforces policy automatically via a cross-account remediation role.",
     results: [
@@ -53,7 +53,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "enterprise-eks-platform",
     name: "Enterprise EKS at Scale",
-    period: "Gartner · 2022–Present",
+    period: "Gartner · 2022 - Present",
     overview:
       "The compute substrate underneath the organization's production workloads: Amazon EKS clusters operated at enterprise scale so product teams can deploy without owning cluster operations.",
     architecture: [
@@ -71,7 +71,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "self-service-cicd-platform",
     name: "Self-Service CI/CD Platform",
-    period: "Gartner · 2022–Present",
+    period: "Gartner · 2022 - Present",
     overview:
       "A self-service CI/CD platform that lets engineering teams ship independently, including a secure migration path from Bitbucket to GitHub for private-subnet repositories.",
     architecture: [

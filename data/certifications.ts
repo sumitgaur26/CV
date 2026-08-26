@@ -1,16 +1,16 @@
 import type { Certification } from "@/lib/types";
 
 // issueDate / credentialUrl are intentionally null where the résumé doesn't
-// specify them — fill these in with real values rather than guessing.
+// specify them. Fill these in with real values rather than guessing.
 export const certifications: Certification[] = [
   {
-    name: "NVIDIA Certified Associate — AI Infrastructure and Operations (NCA-AIIO)",
+    name: "NVIDIA Certified Associate: AI Infrastructure and Operations (NCA-AIIO)",
     issuer: "NVIDIA",
     issueDate: null,
     credentialUrl: null,
   },
   {
-    name: "AWS Certified Solutions Architect — Professional",
+    name: "AWS Certified Solutions Architect - Professional",
     issuer: "Amazon Web Services",
     issueDate: null,
     credentialUrl: null,

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { SearchPalette } from "./SearchPalette";
 
 const LINKS = [
   { href: "#home", label: "Home" },
@@ -56,16 +57,20 @@ export function Navbar() {
           ))}
         </ul>
 
-        <button
-          type="button"
-          className="text-foreground md:hidden"
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span className="sr-only">Toggle navigation</span>
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex items-center gap-3">
+          <SearchPalette />
+
+          <button
+            type="button"
+            className="text-foreground md:hidden"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span className="sr-only">Toggle navigation</span>
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>

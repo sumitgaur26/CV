@@ -5,7 +5,7 @@ export const experience: ExperienceRole[] = [
     id: "gartner",
     title: "Platform Lead",
     company: "Gartner India Research & Advisory Services",
-    period: "Jan 2022 — Present",
+    period: "Jan 2022 - Present",
     summary:
       "Owns the core cloud platform underpinning 200+ servers and 100+ microservices at 99.9% availability; leads a team of 3 engineers.",
     achievements: [
@@ -24,7 +24,7 @@ export const experience: ExperienceRole[] = [
     id: "nagarro",
     title: "Platform Lead",
     company: "Nagarro",
-    period: "Apr 2019 — Jan 2022",
+    period: "Apr 2019 - Jan 2022",
     summary:
       "Led a team of 5 engineers delivering Kubernetes-based platform infrastructure and cloud solutions for enterprise clients.",
     achievements: [
@@ -39,7 +39,7 @@ export const experience: ExperienceRole[] = [
     id: "globallogic",
     title: "DevOps Engineer",
     company: "GlobalLogic",
-    period: "Jun 2017 — Apr 2019",
+    period: "Jun 2017 - Apr 2019",
     summary: "Built CI/CD pipelines and automation tooling for infrastructure provisioning.",
     achievements: [
       "Built and maintained CI/CD pipelines using Jenkins",
@@ -52,7 +52,7 @@ export const experience: ExperienceRole[] = [
     id: "mahindra-comviva",
     title: "Linux Administrator",
     company: "Mahindra Comviva",
-    period: "May 2016 — May 2017",
+    period: "May 2016 - May 2017",
     summary: "Administered production Linux systems and resolved high-priority incidents.",
     achievements: [
       "Administered production Linux systems, user permissions, and logical volume management",

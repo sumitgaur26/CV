@@ -18,7 +18,7 @@ export function Writing() {
         {posts.length === 0 ? (
           <Reveal delay={0.1} className="mt-14 rounded-2xl border border-dashed border-border p-12 text-center">
             <p className="font-body text-sm text-muted">
-              No articles published yet — check back soon.
+              No articles published yet. Check back soon.
             </p>
           </Reveal>
         ) : (
