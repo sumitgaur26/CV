@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Briefcase, CheckCircle2, FolderGit2, Search, XCircle, X } from "lucide-react";
+import { ArrowRight, Briefcase, CheckCircle2, FolderGit2, Search, XCircle, X } from "lucide-react";
 import { searchSkill, SEARCH_SUGGESTIONS, type SearchMatch } from "@/lib/search";
 import { dispatchExpandRole, dispatchExpandProjects, waitForElement } from "@/lib/events";
 
@@ -53,6 +53,13 @@ export function SearchPalette() {
     if (!el) return;
     await new Promise((resolve) => setTimeout(resolve, 350));
     el.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function goToContact() {
+    setOpen(false);
+    setTimeout(() => {
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 200);
   }
 
   return (
@@ -196,18 +203,32 @@ export function SearchPalette() {
                     <div className="flex items-center gap-2">
                       <XCircle size={18} className="shrink-0 text-muted" />
                       <p className="font-heading text-base font-medium text-foreground">
-                        Not something I&apos;ve worked with, based on this résumé.
+                        Not listed here.
                       </p>
                     </div>
+                    <p className="mt-2 font-body text-sm leading-relaxed text-muted">
+                      This page reflects a curated snapshot of my work, not the full picture.
+                      Happy to talk through specifics.
+                    </p>
+
                     {result.suggestion && (
                       <button
                         type="button"
                         onClick={() => setQuery(result.suggestion as string)}
-                        className="mt-3 font-body text-sm text-accent hover:underline"
+                        className="mt-3 block font-body text-sm text-accent hover:underline"
                       >
                         Did you mean {result.suggestion}?
                       </button>
                     )}
+
+                    <button
+                      type="button"
+                      onClick={goToContact}
+                      className="group mt-4 inline-flex items-center gap-1.5 rounded-xl border border-accent/30 bg-accent-dim px-4 py-2 font-body text-sm font-medium text-accent transition-colors hover:border-accent/50 hover:bg-accent/15"
+                    >
+                      Let&apos;s discuss
+                      <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+                    </button>
                   </div>
                 )}
               </div>
