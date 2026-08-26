@@ -12,7 +12,7 @@ export function PersonJsonLd() {
     "@type": "Person",
     name: profile.name,
     jobTitle: profile.role,
-    description: profile.valueProposition,
+    description: profile.positioning,
     url: SITE_URL,
     email: `mailto:${profile.email}`,
     address: {

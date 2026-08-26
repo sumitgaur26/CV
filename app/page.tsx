@@ -17,7 +17,7 @@ export default function Home() {
       <PersonJsonLd />
       <a
         href="#main-content"
-        className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-lg bg-accent px-4 py-2 font-body text-sm font-semibold text-background transition-transform focus:translate-y-0"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:font-body focus:text-sm focus:font-semibold focus:text-background"
       >
         Skip to content
       </a>

@@ -19,20 +19,20 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: `${profile.name} · ${profile.role}`,
-  description: profile.valueProposition,
+  description: profile.positioning,
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: `${profile.name} · ${profile.role}`,
-    description: profile.valueProposition,
+    description: profile.positioning,
     type: "website",
     url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",
     title: `${profile.name} · ${profile.role}`,
-    description: profile.valueProposition,
+    description: profile.positioning,
   },
 };
 

@@ -2,6 +2,7 @@ export interface Profile {
   name: string;
   role: string;
   tagline: string;
+  positioning: string;
   valueProposition: string;
   location: string;
   summary: string;

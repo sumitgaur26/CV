@@ -36,8 +36,17 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-6 max-w-xl text-balance font-body text-lg leading-relaxed text-muted"
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="mt-6 max-w-xl text-balance font-body text-xl font-medium leading-snug text-foreground/90"
+          >
+            {profile.positioning}
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+            className="mt-4 max-w-xl text-balance font-body text-base leading-relaxed text-muted"
           >
             {profile.valueProposition}
           </motion.p>
