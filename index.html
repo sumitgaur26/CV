@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio &amp; CV</title>
+  <meta name="description" content="Personal portfolio and digital CV with a searchable project index." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Home">YN</a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-list" id="navList">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="top" class="hero">
+      <div class="container">
+        <h1 id="heroName">Loading…</h1>
+        <p id="heroTitle" class="hero-title"></p>
+        <p id="heroSummary" class="hero-summary"></p>
+        <div class="hero-actions">
+          <a id="resumeLink" class="btn btn-primary" href="assets/resume.pdf" download>Download Résumé</a>
+          <a class="btn btn-secondary" href="#projects">View Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <dl class="about-grid" id="aboutDetails" aria-label="Contact details"></dl>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <p class="section-hint">Click a skill to filter projects, or use the search box below.</p>
+        <ul class="skill-list" id="skillList" aria-label="Skills and technologies"></ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <form class="search-form" id="searchForm" role="search" aria-label="Search projects by skill">
+          <label class="sr-only" for="searchInput">Search projects by skill or technology</label>
+          <input
+            type="search"
+            id="searchInput"
+            name="q"
+            placeholder="Search by skill or technology, e.g. React, Python, Docker…"
+            autocomplete="off"
+          />
+          <button type="button" id="clearSearch" class="btn btn-secondary" hidden>Clear</button>
+        </form>
+
+        <p id="resultsStatus" class="results-status" role="status" aria-live="polite"></p>
+
+        <ul class="project-grid" id="projectGrid" aria-label="Project list"></ul>
+
+        <p id="noResults" class="no-results" hidden>
+          No projects match "<span id="noResultsQuery"></span>". Try a different skill or
+          <button type="button" id="resetFromEmpty" class="link-button">clear the search</button>.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Interested in working together? Reach out directly.</p>
+        <ul class="contact-list" id="contactList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> <span id="footerName">Your Name</span>. Built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

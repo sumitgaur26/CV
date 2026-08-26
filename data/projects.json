@@ -1,0 +1,42 @@
+[
+  {
+    "id": "task-tracker-api",
+    "name": "Task Tracker API",
+    "description": "A REST API for managing team tasks with role-based access control, built to explore clean layered architecture in Node.js.",
+    "technologies": ["Node.js", "Express", "PostgreSQL", "REST APIs", "Docker"],
+    "repo": "https://github.com/your-username/task-tracker-api",
+    "demo": ""
+  },
+  {
+    "id": "portfolio-cv-site",
+    "name": "Portfolio / CV Website",
+    "description": "This site — a searchable digital CV built with vanilla HTML, CSS, and JavaScript, with project data driven entirely by JSON.",
+    "technologies": ["JavaScript", "HTML5", "CSS3"],
+    "repo": "https://github.com/your-username/CV",
+    "demo": ""
+  },
+  {
+    "id": "realtime-dashboard",
+    "name": "Realtime Analytics Dashboard",
+    "description": "A React dashboard that visualizes live event data streamed from a Node.js backend over WebSockets.",
+    "technologies": ["React", "TypeScript", "Node.js", "MongoDB"],
+    "repo": "https://github.com/your-username/realtime-dashboard",
+    "demo": ""
+  },
+  {
+    "id": "data-pipeline",
+    "name": "ETL Data Pipeline",
+    "description": "A scheduled Python pipeline that extracts data from third-party APIs, transforms it, and loads it into a warehouse for reporting.",
+    "technologies": ["Python", "SQL", "AWS", "Docker"],
+    "repo": "https://github.com/your-username/data-pipeline",
+    "demo": ""
+  },
+  {
+    "id": "component-library",
+    "name": "Shared UI Component Library",
+    "description": "A versioned, accessible component library used across several internal React apps, with automated visual regression tests.",
+    "technologies": ["React", "TypeScript", "CSS3", "Git"],
+    "repo": "https://github.com/your-username/component-library",
+    "demo": ""
+  }
+]

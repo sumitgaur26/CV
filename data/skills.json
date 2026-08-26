@@ -1,0 +1,17 @@
+[
+  { "name": "JavaScript", "category": "Languages" },
+  { "name": "TypeScript", "category": "Languages" },
+  { "name": "Python", "category": "Languages" },
+  { "name": "SQL", "category": "Languages" },
+  { "name": "React", "category": "Frontend" },
+  { "name": "HTML5", "category": "Frontend" },
+  { "name": "CSS3", "category": "Frontend" },
+  { "name": "Node.js", "category": "Backend" },
+  { "name": "Express", "category": "Backend" },
+  { "name": "REST APIs", "category": "Backend" },
+  { "name": "PostgreSQL", "category": "Data" },
+  { "name": "MongoDB", "category": "Data" },
+  { "name": "Docker", "category": "DevOps" },
+  { "name": "AWS", "category": "DevOps" },
+  { "name": "Git", "category": "Tools" }
+]

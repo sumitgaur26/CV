@@ -1,0 +1,13 @@
+{
+  "name": "Your Name",
+  "title": "Software Engineer",
+  "location": "City, Country",
+  "summary": "Replace this with a 2-3 sentence summary of who you are, what you build, and what you're looking for. Keep it specific and outcome-focused rather than generic.",
+  "email": "your.email@example.com",
+  "social": {
+    "github": "https://github.com/your-username",
+    "linkedin": "https://linkedin.com/in/your-username",
+    "website": ""
+  },
+  "resumeUrl": "assets/resume.pdf"
+}
