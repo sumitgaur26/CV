@@ -29,23 +29,27 @@ export function Certifications() {
           description="Formal validation across cloud, Kubernetes, infrastructure automation, and AI infrastructure."
         />
 
-        <RevealGroup className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup className="mt-14 divide-y divide-border overflow-hidden rounded-2xl border border-border">
           {certifications.map((cert) => (
             <motion.button
               key={cert.name}
               variants={revealItem}
               onClick={() => setSelected(cert)}
-              className="group flex h-full flex-col items-start gap-4 rounded-2xl border border-border bg-surface/30 p-6 text-left transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-glow"
+              className="group flex w-full items-center gap-4 bg-transparent px-5 py-5 text-left transition-colors hover:bg-surface/50 sm:px-8"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-border-strong bg-background/60 text-accent">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-border-strong bg-surface text-accent">
                 <Award size={18} />
               </span>
-              <div>
+              <div className="min-w-0 flex-1">
                 <h3 className="font-heading text-base font-medium leading-snug text-foreground">
                   {cert.name}
                 </h3>
                 <p className="mt-1 font-body text-sm text-muted">{cert.issuer}</p>
               </div>
+              <ExternalLink
+                size={16}
+                className="shrink-0 text-muted opacity-0 transition-opacity group-hover:opacity-100"
+              />
             </motion.button>
           ))}
         </RevealGroup>

@@ -52,9 +52,10 @@ export function SearchPalette() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 rounded-xl border border-border-strong bg-white/[0.02] px-3 py-1.5 font-body text-sm text-muted transition-colors hover:border-accent/40 hover:text-foreground"
+        aria-label="Search skills"
+        className="flex h-11 min-w-11 items-center justify-center gap-2 rounded-xl border border-border-strong bg-white/[0.02] px-3 font-body text-sm text-foreground/80 transition-colors hover:border-accent/40 hover:text-foreground sm:h-auto sm:justify-start sm:py-1.5"
       >
-        <Search size={14} />
+        <Search size={16} className="shrink-0" />
         <span className="hidden sm:inline">Search skills</span>
         <kbd className="hidden rounded border border-border-strong px-1.5 py-0.5 font-body text-[10px] text-muted sm:inline">
           ⌘K

@@ -8,11 +8,10 @@ import { SearchPalette } from "./SearchPalette";
 
 const LINKS = [
   { href: "#home", label: "Home" },
-  { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
   { href: "#ai-infrastructure", label: "AI Infrastructure" },
   { href: "#certifications", label: "Certifications" },
-  { href: "#writing", label: "Writing" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -29,11 +28,21 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (open) {
+      const previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = previousOverflow;
+      };
+    }
+  }, [open]);
+
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        scrolled
+        scrolled || open
           ? "border-b border-border bg-background/70 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
       )}
@@ -43,32 +52,32 @@ export function Navbar() {
           Sumit Gaur
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-2 md:flex">
           {LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="group relative font-body text-sm text-muted transition-colors hover:text-foreground"
+                className="group relative block px-3 py-2 font-body text-sm font-medium text-foreground/75 transition-colors hover:text-foreground"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
+                <span className="absolute bottom-1 left-3 right-3 h-px scale-x-0 bg-accent transition-transform duration-300 group-hover:scale-x-100" />
               </a>
             </li>
           ))}
         </ul>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <SearchPalette />
 
           <button
             type="button"
-            className="text-foreground md:hidden"
+            className="flex h-11 w-11 items-center justify-center text-foreground md:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
             onClick={() => setOpen((v) => !v)}
           >
-            <span className="sr-only">Toggle navigation</span>
-            {open ? <X size={22} /> : <Menu size={22} />}
+            {open ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </nav>
@@ -81,14 +90,14 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-border bg-background/95 backdrop-blur-xl md:hidden"
+            className="overflow-hidden border-t border-border bg-background shadow-soft md:hidden"
           >
             {LINKS.map((link) => (
               <li key={link.href} className="border-b border-border/60 last:border-0">
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block px-6 py-4 font-body text-sm text-muted hover:text-foreground"
+                  className="block px-6 py-4 font-body text-base text-foreground/85 transition-colors hover:text-foreground"
                 >
                   {link.label}
                 </a>

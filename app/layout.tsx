@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import { profile } from "@/data/profile";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -16,12 +17,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: `${profile.name} · ${profile.role}`,
   description: profile.valueProposition,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: `${profile.name} · ${profile.role}`,
     description: profile.valueProposition,
     type: "website",
+    url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",

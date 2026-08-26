@@ -66,6 +66,15 @@ export function Hero() {
               Contact
             </MagneticButton>
           </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.75 }}
+            className="mt-8 font-body text-sm tracking-wide text-muted lg:hidden"
+          >
+            NVIDIA NCA-AIIO &middot; AWS SA Pro &middot; CKA
+          </motion.p>
         </div>
 
         <motion.div
