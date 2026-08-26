@@ -18,7 +18,7 @@ export const experience: ExperienceRole[] = [
       "Automated image lifecycle management, reducing provisioning time from 2–3 days to under 1 hour",
       "Drove a 50% reduction in AWS cloud costs through rightsizing and compute governance",
     ],
-    tech: ["AWS", "EKS", "Terraform", "Jenkins", "CyberArk", "Python", "Datadog"],
+    tech: ["AWS", "EKS", "Kubernetes", "Terraform", "Jenkins", "CyberArk", "Python", "Datadog"],
   },
   {
     id: "nagarro",

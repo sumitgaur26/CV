@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CheckCircle2, ChevronDown } from "lucide-react";
 import { caseStudies } from "@/data/projects";
@@ -9,6 +9,7 @@ import { Container } from "./ui/Container";
 import { SectionHeading } from "./ui/SectionHeading";
 import { Reveal } from "./ui/Reveal";
 import { CaseStudyArchitecture } from "./CaseStudyArchitecture";
+import { EXPAND_PROJECTS_EVENT } from "@/lib/events";
 
 const FEATURED_COUNT = 2;
 
@@ -71,6 +72,14 @@ export function Projects() {
   const [showAll, setShowAll] = useState(false);
   const featured = caseStudies.slice(0, FEATURED_COUNT);
   const rest = caseStudies.slice(FEATURED_COUNT);
+
+  useEffect(() => {
+    function handleExpand() {
+      setShowAll(true);
+    }
+    window.addEventListener(EXPAND_PROJECTS_EVENT, handleExpand);
+    return () => window.removeEventListener(EXPAND_PROJECTS_EVENT, handleExpand);
+  }, []);
 
   return (
     <section id="projects" className="bg-surface/30 py-28">

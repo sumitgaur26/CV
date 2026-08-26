@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Briefcase, CheckCircle2, FolderGit2, Search, XCircle, X } from "lucide-react";
 import { searchSkill, SEARCH_SUGGESTIONS, type SearchMatch } from "@/lib/search";
-import { dispatchExpandRole } from "@/lib/events";
+import { dispatchExpandRole, dispatchExpandProjects, waitForElement } from "@/lib/events";
 
 export function SearchPalette() {
   const [open, setOpen] = useState(false);
@@ -32,19 +32,27 @@ export function SearchPalette() {
     return searchSkill(query);
   }, [query]);
 
-  function goToProject(id: string) {
+  async function goToProject(id: string) {
     setOpen(false);
-    setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 200);
+    // Case studies beyond the first two are collapsed behind "View more
+    // case studies" and aren't in the DOM until that toggle fires, so
+    // make sure it's expanded before we try to find and scroll to it.
+    dispatchExpandProjects();
+    const el = await waitForElement(id);
+    if (!el) return;
+    // Give the reveal animation a moment to finish so the scroll target
+    // lands in its final position instead of a mid-animation offset.
+    await new Promise((resolve) => setTimeout(resolve, 450));
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  function goToRole(id: string) {
+  async function goToRole(id: string) {
     setOpen(false);
     dispatchExpandRole(id);
-    setTimeout(() => {
-      document.getElementById(`role-${id}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
-    }, 200);
+    const el = await waitForElement(`role-${id}`);
+    if (!el) return;
+    await new Promise((resolve) => setTimeout(resolve, 350));
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
   return (
