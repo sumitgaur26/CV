@@ -21,7 +21,9 @@ export const metadata: Metadata = {
   title: `${profile.name} · ${profile.role}`,
   description: profile.positioning,
   alternates: {
-    canonical: "/",
+    // Absolute, not "/" — a leading-slash relative URL resolves against
+    // the origin root and silently drops the /CV project-page path.
+    canonical: SITE_URL,
   },
   openGraph: {
     title: `${profile.name} · ${profile.role}`,

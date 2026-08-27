@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FileDown, Linkedin, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
+import { BASE_PATH } from "@/lib/site";
 import { Container } from "./ui/Container";
 import { GridBackground } from "./ui/GridBackground";
 import { MagneticButton } from "./ui/MagneticButton";
@@ -98,7 +99,7 @@ export function Hero() {
             className="relative h-full w-full overflow-hidden rounded-2xl border border-border-strong bg-surface shadow-soft"
           >
             <Image
-              src="/images/portrait.jpg"
+              src={`${BASE_PATH}/images/portrait.jpg`}
               alt="Portrait of Sumit Gaur"
               fill
               priority

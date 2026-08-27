@@ -1,4 +1,5 @@
 import type { Profile, Metric } from "@/lib/types";
+import { BASE_PATH } from "@/lib/site";
 
 export const profile: Profile = {
   name: "Sumit Gaur",
@@ -14,7 +15,7 @@ export const profile: Profile = {
   email: "sumitgaur769@gmail.com",
   linkedin: "https://linkedin.com/in/sumitgaur-pl",
   github: null,
-  resumeUrl: "/resume.docx",
+  resumeUrl: `${BASE_PATH}/resume.docx`,
 };
 
 export const metrics: Metric[] = [
