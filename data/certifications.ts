@@ -4,6 +4,12 @@ import type { Certification } from "@/lib/types";
 // specify them. Fill these in with real values rather than guessing.
 export const certifications: Certification[] = [
   {
+    name: "AWS Certified Generative AI Developer - Professional (AIP-C01)",
+    issuer: "Amazon Web Services",
+    issueDate: null,
+    credentialUrl: null,
+  },
+  {
     name: "NVIDIA Certified Associate: AI Infrastructure and Operations (NCA-AIIO)",
     issuer: "NVIDIA",
     issueDate: null,

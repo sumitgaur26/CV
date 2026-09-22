@@ -43,6 +43,18 @@ const ALIASES: Record<string, string> = {
   "retrieval augmented generation": "rag",
   copilot: "github copilot",
   "claude": "claude code",
+  bedrock: "amazon bedrock",
+  strands: "aws strands agents sdk",
+  "vector db": "vector databases",
+  vectordb: "vector databases",
+  "vector database": "vector databases",
+  comprehend: "amazon comprehend",
+  macie: "amazon macie",
+  xray: "aws x-ray",
+  "x ray": "aws x-ray",
+  guardrails: "ai guardrails",
+  "prompt engineering": "prompt engineering",
+  genai: "amazon bedrock",
 };
 
 function normalize(s: string): string {

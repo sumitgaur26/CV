@@ -8,10 +8,10 @@ export const profile: Profile = {
   positioning:
     "Platform engineering leader building the reliable cloud, Kubernetes, governance, and GPU foundations organizations need for AI workloads.",
   valueProposition:
-    "I design and operate the distributed infrastructure (cloud governance, CI/CD, identity, and Kubernetes) that engineering orgs depend on to ship reliably at scale, and I'm extending that foundation into AI infrastructure.",
+    "I design and operate the distributed infrastructure (cloud governance, CI/CD, identity, and Kubernetes) that engineering orgs depend on to ship reliably at scale, and I'm extending that foundation into applied generative AI infrastructure with Amazon Bedrock, agentic systems, and RAG.",
   location: "Delhi, India",
   summary:
-    "Platform engineer with 10+ years designing and operating the distributed, event-driven infrastructure that other engineering teams depend on to ship reliably at scale. Owns systems end-to-end, from architecture through production operation, spanning cross-account cloud governance, asynchronous service infrastructure, identity and access control, and CI/CD platforms serving 100+ microservices in production.",
+    "Platform engineer with 10+ years designing and operating the distributed, event-driven infrastructure that other engineering teams depend on to ship reliably at scale. Owns systems end-to-end, from architecture through production operation, spanning cross-account cloud governance, asynchronous service infrastructure, identity and access control, and CI/CD platforms serving 100+ microservices in production. Currently extending this platform expertise into applied generative AI infrastructure, architecting Bedrock-based agentic and RAG systems, backed by the AWS Certified Generative AI Developer - Professional (AIP-C01) certification.",
   email: "sumitgaur769@gmail.com",
   linkedin: "https://linkedin.com/in/sumitgaur-pl",
   github: null,

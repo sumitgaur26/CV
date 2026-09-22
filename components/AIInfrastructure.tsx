@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu, Database, Network, Gauge, Server } from "lucide-react";
-import { aiInfraCapabilities, genAiTools } from "@/data/aiInfrastructure";
+import { Cpu, Database, Network, Gauge, Server, Construction } from "lucide-react";
+import { aiInfraCapabilities, genAiTools, genAiProjectsInProgress } from "@/data/aiInfrastructure";
 import { Container } from "./ui/Container";
 import { SectionHeading } from "./ui/SectionHeading";
 import { Reveal, RevealGroup, revealItem } from "./ui/Reveal";
@@ -35,7 +35,7 @@ export function AIInfrastructure() {
         <SectionHeading
           eyebrow="AI Infrastructure"
           title="Platform foundations for AI workloads."
-          description="NVIDIA-certified (NCA-AIIO), extending a decade of cloud platform ownership into GPU cluster architecture and AI workload orchestration."
+          description="NVIDIA-certified (NCA-AIIO) and AWS Certified Generative AI Developer - Professional, extending a decade of cloud platform ownership into GPU cluster architecture, agentic systems, and RAG pipelines."
         />
 
         <Reveal delay={0.1} className="mt-16 overflow-x-auto">
@@ -74,7 +74,7 @@ export function AIInfrastructure() {
 
         <Reveal delay={0.1} className="mt-14">
           <p className="font-body text-xs font-medium uppercase tracking-wider text-muted">
-            Applied Gen AI Tooling
+            Applied Gen AI &amp; Agentic Systems
           </p>
         </Reveal>
         <RevealGroup className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -86,6 +86,45 @@ export function AIInfrastructure() {
             >
               <h3 className="font-heading text-base font-medium text-foreground">{tool.title}</h3>
               <p className="mt-2 font-body text-sm leading-relaxed text-muted">{tool.description}</p>
+            </motion.div>
+          ))}
+        </RevealGroup>
+
+        <Reveal delay={0.1} className="mt-14 flex items-center gap-2">
+          <Construction size={13} className="text-muted" />
+          <p className="font-body text-xs font-medium uppercase tracking-wider text-muted">
+            In Progress: Applied GenAI Reference Systems
+          </p>
+        </Reveal>
+        <Reveal delay={0.15} className="mt-2">
+          <p className="max-w-2xl font-body text-sm leading-relaxed text-muted">
+            Four agentic RAG reference systems built on AI-generated synthetic datasets, applying
+            AWS Certified Generative AI Developer patterns across different orchestration and
+            retrieval tooling. Not yet shipped, so no results are claimed here; source will be
+            published on GitHub on completion.
+          </p>
+        </Reveal>
+        <RevealGroup className="mt-4 grid gap-4 sm:grid-cols-2">
+          {genAiProjectsInProgress.map((project) => (
+            <motion.div
+              key={project.name}
+              variants={revealItem}
+              className="rounded-2xl border border-dashed border-border-strong bg-background/30 p-6"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="font-heading text-base font-medium text-foreground">
+                  {project.name}
+                </h3>
+                <span className="shrink-0 rounded-full border border-border-strong px-2.5 py-0.5 font-body text-[10px] font-medium uppercase tracking-wide text-muted">
+                  In progress
+                </span>
+              </div>
+              <p className="mt-2 font-body text-sm leading-relaxed text-muted">
+                {project.description}
+              </p>
+              <p className="mt-3 font-body text-xs leading-relaxed text-foreground/60">
+                {project.pipeline}
+              </p>
             </motion.div>
           ))}
         </RevealGroup>

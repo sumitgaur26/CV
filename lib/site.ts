@@ -5,7 +5,7 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sumitgaur26.github.io/CV";
 
 // Must match next.config.mjs's basePath. Needed anywhere a raw asset
-// URL is built by hand — next/link and next/image apply basePath
+// URL is built by hand: next/link and next/image apply basePath
 // automatically, but next/image does NOT when images.unoptimized is
 // true (required for a static export with no image-optimization
 // server), and a plain <a href> never does.

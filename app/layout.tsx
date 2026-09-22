@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: `${profile.name} · ${profile.role}`,
   description: profile.positioning,
   alternates: {
-    // Absolute, not "/" — a leading-slash relative URL resolves against
+    // Absolute, not "/": a leading-slash relative URL resolves against
     // the origin root and silently drops the /CV project-page path.
     canonical: SITE_URL,
   },

@@ -1,8 +1,8 @@
 import type { AIInfraCapability } from "@/lib/types";
 
-// Scoped to what's actually verified (NVIDIA NCA-AIIO certification and
-// platform background), not extended into LLM/MLOps claims without
-// hands-on experience to back them.
+// GPU/infrastructure fundamentals: certification-backed (NVIDIA
+// NCA-AIIO) plus platform background, not extended beyond what's
+// actually verified.
 export const aiInfraCapabilities: AIInfraCapability[] = [
   {
     title: "GPU Architecture",
@@ -30,27 +30,80 @@ export const aiInfraCapabilities: AIInfraCapability[] = [
   },
 ];
 
-// Applied Gen AI tooling: hands-on familiarity, distinct from the
-// certification-backed infrastructure fundamentals above.
+// Applied generative AI and agentic systems: backed by the AWS
+// Certified Generative AI Developer - Professional (AIP-C01)
+// credential, not just self-reported tool familiarity.
 export const genAiTools: AIInfraCapability[] = [
   {
-    title: "Claude Code",
-    description: "Anthropic's agentic CLI for AI-assisted software development.",
+    title: "Amazon Bedrock",
+    description: "Agents, Knowledge Bases, Guardrails, and Prompt Flows for production GenAI systems.",
   },
   {
-    title: "GitHub Copilot",
-    description: "AI pair-programming assistant integrated into the daily dev workflow.",
+    title: "Agentic Orchestration",
+    description: "AWS Strands Agents SDK and agentic workflow orchestration via Step Functions.",
   },
   {
-    title: "RAG",
-    description: "Retrieval-augmented generation for grounding LLM output in real data.",
+    title: "RAG & Vector Search",
+    description: "Retrieval-augmented generation over OpenSearch, Pinecone, Chroma, and pgvector.",
   },
   {
-    title: "LangChain",
-    description: "Framework for composing LLM-powered applications and pipelines.",
+    title: "LangChain & LlamaIndex",
+    description: "Orchestration and data-indexing frameworks for LLM-powered applications.",
   },
   {
-    title: "LlamaIndex",
-    description: "Data framework connecting LLMs to custom data sources for RAG pipelines.",
+    title: "AI Safety & Governance",
+    description: "Prompt engineering and governance, guardrails, and content-filtering controls.",
+  },
+  {
+    title: "PII Detection",
+    description: "Amazon Comprehend and Macie for identifying and handling sensitive data in GenAI pipelines.",
+  },
+  {
+    title: "GenAI Observability",
+    description: "CloudWatch and X-Ray tracing extended to agentic and RAG workloads.",
+  },
+  {
+    title: "AI-Assisted Development",
+    description: "Claude Code and GitHub Copilot as part of the daily engineering workflow.",
+  },
+];
+
+export interface GenAiProject {
+  name: string;
+  description: string;
+  pipeline: string;
+}
+
+// Personal projects, explicitly in progress: not shipped, no
+// fabricated results. Source will be published on GitHub on
+// completion; until then this is scoped as "building," not "built."
+export const genAiProjectsInProgress: GenAiProject[] = [
+  {
+    name: "Customer Support: Grounded Answer Deflection",
+    description:
+      "A LangChain-orchestrated serverless RAG pipeline that deflects repetitive support tickets to verified help-doc answers with source citations.",
+    pipeline:
+      "S3 → Lambda ingestion → Bedrock Knowledge Base → OpenSearch hybrid search + reranking → Bedrock grounded response",
+  },
+  {
+    name: "Financial Research Copilot",
+    description:
+      "A cross-document semantic search and insight pipeline with citation-backed answers and trend visualization.",
+    pipeline:
+      "S3 → AWS Glue ETL → Bedrock Knowledge Base (Pinecone) → Bedrock-generated insights → Amazon QuickSight",
+  },
+  {
+    name: "Insurance Policy & Claims Copilot",
+    description:
+      "A clause-level retrieval and decisioning system for compliance-traceable claims review.",
+    pipeline:
+      "S3 → Amazon Textract → LlamaIndex clause indexing → OpenSearch vector store → Bedrock decisioning → DynamoDB audit trail",
+  },
+  {
+    name: "Legal Contract & Case-Law Q&A",
+    description:
+      "An entity- and clause-graph-aware retrieval system for contract and precedent lookup.",
+    pipeline:
+      "S3 → Textract → Amazon Neptune graph → AWS Strands agent → Bedrock exact-language answers → Amazon Kendra fallback",
   },
 ];
